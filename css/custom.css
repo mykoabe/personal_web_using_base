@@ -3,3 +3,19 @@
     border: none;
     border-color:red;
 }
+/* 
+@media (min-width: 992px) {
+    .navbar-nav li a {
+      line-height: 85px;
+    }
+  }
+@media (max-width: 991px) {
+    .navbar-brand {
+      float: none;
+    }
+  }
+  .navbar-toggler {
+    border: none;
+    width: 1em;
+    float: right;
+  } */
