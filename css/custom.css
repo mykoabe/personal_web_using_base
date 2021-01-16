@@ -1,8 +1,8 @@
-*{background-color: white;}
-.card{
+/* *{background-color: white;} */
+/* .card{
     border: none;
     border-color:red;
-}
+} */
 /* 
 @media (min-width: 992px) {
     .navbar-nav li a {
@@ -19,3 +19,54 @@
     width: 1em;
     float: right;
   } */
+  .exe{
+    position: fixed;
+  }
+ /* .card-ex {
+    position: fixed;
+    z-index: 1060;
+    float:left;
+    top:0; 
+    bottom: 0;
+    height: 100%;
+    width: 25%;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    background-color: black;
+  } */
+  .card-ex {
+    position: fixed;
+    float:left;
+    top:0; 
+    bottom: 0;
+    height: 100%;
+    width: 25%;
+   
+    /* transition: visibility .2s, transform .2s ease-in-out; */
+  }
+.modal .modal-dialog-aside{
+	width: 350px;
+	max-width:80%; height: 100%; margin:0;
+    transform: translate(0); transition: transform .2s;
+}
+.page-content {
+    position: absolute;
+    margin-right: -220px;
+}
+main{
+  position: absolute;
+  z-index: 1;
+}
+.exe{
+  position: fixed;
+}
+
+
+
+.modal .modal-dialog-aside .modal-content{  height: inherit; border:0; border-radius: 0; background-color:black; color:white;}
+.modal .modal-dialog-aside .modal-content .modal-body{ overflow-y: auto }
+.modal.fixed-left .modal-dialog-aside{ margin-left:auto;  transform: translateX(100%); }
+.modal.fixed-right .modal-dialog-aside{ margin-right:auto; transform: translateX(-100%); }
+
+.modal.show .modal-dialog-aside{ transform: translateX(0);  }
+
