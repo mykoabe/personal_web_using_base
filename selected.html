@@ -1,0 +1,167 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="keywords" content="htmlcss bootstrap menu, navbar, mega menu examples" />
+<meta name="description" content="Bootstrap navbar examples for any type of project, Bootstrap 4" />  
+
+<title>Demo - Bootstrap Navbar collapse to off canvas. html code example </title>
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+crossorigin="anonymous"></script>
+
+<!-- Bootstrap files (jQuery first, then Popper.js, then Bootstrap JS) -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+/// some script
+$(function () {
+	  'use strict'
+
+	$("[data-trigger]").on("click", function(){
+        var trigger_id =  $(this).attr('data-trigger');
+        $(trigger_id).toggleClass("show");
+        $('body').toggleClass("offcanvas-active");
+    });
+
+    // close if press ESC button 
+    $(document).on('keydown', function(event) {
+        if(event.keyCode === 27) {
+           $(".navbar-collapse").removeClass("show");
+           $("body").removeClass("overlay-active");
+        }
+    });
+
+    // close button 
+    $(".btn-close").click(function(e){
+        $(".navbar-collapse").removeClass("show");
+        $("body").removeClass("offcanvas-active");
+    }); 
+
+
+})
+</script>
+<link rel="stylesheet" href="./css/custom.css">
+</head>
+<body>
+
+
+
+<!-- ========================= SECTION CONTENT ========================= -->
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <button class="navbar-toggler" type="button" data-trigger="#main_nav">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand mt-0 mr-auto" href="#">Navbar</a>
+</nav>
+
+<div class="navbar-collapse d-xl-none d-lg-none" id="main_nav">
+  <div class="offcanvas-header mt-3">  
+    <button class="btn btn-outline-danger btn-close float-left"> &times</button>
+  </div>
+     <div class="my-5">
+       <img src="./img/beat miki.png" class="img-responsive mx-5" style="width: 50px; height:50px;" alt="">
+       <h5 class="mx-5 mt-5 text-white">
+         mekuanint abebe
+       </h5>
+       <div class="mx-5 my-5">
+        <a class="d-block m-3"  href="Index.html">Home</a>
+        <a class="d-block m-2"  href="about.html">About me</a><br>
+        <a class="d-block m-2"  href="selected.html">Selected Books</a><br>
+        <a class="d-block m-2"  href="curriculem vitae.html">Curriculem Vitae</a><br>
+       </div>
+     </div>
+  
+    </div> <!-- navbar-collapse.// -->
+
+   
+   
+<div class="container-fluid d ">
+    <div class="content d-none d-xl-block d-lg-block">
+        <div class="my-5">
+          <img src="./img/beat miki.png" class="img-responsive mx-5" style="width: 50px; height:50px;" alt="">
+          <h5 class="mx-5 mt-5 text-white">
+            mekuanint abebe
+          </h5>
+          <div class="m-5 d-block">
+            <a class="d-block m-3"  href="Index.html">Home</a>
+            <a class="d-block m-2"  href="about.html">About me</a><br>
+            <a class="d-block m-2"  href="selected.html">Selected Books</a><br>
+            <a class="d-block m-2"  href="curriculem vitae.html">Curriculem Vitae</a><br>
+          </div>
+        </div>
+      </div>
+ 
+<div class="row">
+    <div class="col-xl-3 col-sm-1 col-lg-3 col-md-1">
+    </div>
+    <div class="col-xl-9 col-sm-11 col-xs-11 col-md-11 col-lg-9 float-left">
+        <div class="container-fluid ">
+            <div class=" text-center"><h2 class="display-4 p-5">Books which facionate me</h2></div>
+          
+         
+           <ul>
+               <li>Headfirst HTML CSS and java-script -  it is also the best book for web development and designers 
+                   and also for higher and preparatory school students. Intentional developers 
+                   can use it to learn in small time intervals so it is preferential</li>
+                   <li>Fikir eske mekabir – by by hadis alemayehu which is the history is manily 
+                       about two couples which finished there 
+                       life with life until the last day of their life and cultural behaviour of 
+                       ethiopian people in the past.</li>
+               <li>java in two semesters – this book is also best book for students 
+                   who want to learn java in small days about basics of java and its usage in 
+                   simple English language.</li>
+               <li>Wu, Stephen T, Sijia Liu, Yanshan Wang, Tamara Timmons, Harsha Uppili, Steven Bedrick, 
+                   William Hersh, and Hongfang Liu. Intra-institutional EHR Collections for Patient-Level 
+                   Information Retrieval. Journal of the American
+                    Society for Information Science and Technology. doi:10.1002/asi.23884. September 2017.</li>
+               <li>Headfirst android development, A Brain-Friendly Guide,  Dawn Griffi ths & David
+                   Griffi Robsonths. if some one is intersested in the development of mobile application 
+                   the first choice is Headfirst. as any one me also uses greatly for my android development 
+                   course in in my college studies.
+                   </li>
+               <li>HTML & CSS,Design and Build Websites, Jon Duckett is also my favourite book for ever 
+                   for my web development and design course. it is mandatory for someone who wanted to be
+                   a successful web developer to read this book. it is easy and clarifies every thing with
+                   best explanation.  </li>
+               <li>Wu, Stephen T, Timothy Miller, James Masanz, Matt Coarr, 
+                   Scott Halgrim, David Carrell, Cheryl Clark. Negation's not solved: Generalizability 
+                   versus Optimizability in clinical natural language processing.  
+                   PLoS One. Nov 2014. 
+                   [NLP Best Paper, 2015 IMIA Yearbook]</li>
+               <li>php and mysql in web development all in one desk reference for dummies, by Janet Valade with Tricia Ballad
+                   and Bill Ballad is also the best book know I am reading an intersested with that and gives best Information
+                   about both mysql and php web development for in backend and frontend web development. That me  I hope
+               I will get both the server side and client side web design knowledge in one book.</li>
+               <li>
+                   I read many philosophical and novel books for my general knowledge. some of them if I wanted to list
+                   some of them include aliweledim, dem bedem, yaltenore liginet, kedit wede matu, efoyita,
+                   keaddimas bashager, haddis, yanna mastawesh and many other books are intersestedme.
+               </li>
+               <li>In the next two years I am going to read many books from novel to academic books because books
+                   are the one which gives strength and flexibility to our mind like food gives to all other parts of 
+                   the body. so reading books is the best way to increase our mindset. Reading is not for anly for 
+                   colege examinations but we must read all the time. having a good grade in colege is not like having
+                   great knowlege about that subject.
+                   .</li>
+               <li>
+                       As I read books and magazines and any other written material I waw also have time
+                       for playing and taking time with friends. I play football at the weekend and basket 
+                       ball every day at the morning. sometimes we play table tennis with my friends. playing 
+                       football gives me a good recreation than every thing. when I feel depresed I went to play 
+                       table tennis.
+               </li>
+                  </div>
+    </div>
+</div>
+
+
+</div><!-- container //  -->
+
+</body>
+</html>

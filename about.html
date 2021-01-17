@@ -1,0 +1,127 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="keywords" content="htmlcss bootstrap menu, navbar, mega menu examples" />
+<meta name="description" content="Bootstrap navbar examples for any type of project, Bootstrap 4" />  
+
+<title>Demo - Bootstrap Navbar collapse to off canvas. html code example </title>
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+crossorigin="anonymous"></script>
+
+<!-- Bootstrap files (jQuery first, then Popper.js, then Bootstrap JS) -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+/// some script
+$(function () {
+	  'use strict'
+
+	$("[data-trigger]").on("click", function(){
+        var trigger_id =  $(this).attr('data-trigger');
+        $(trigger_id).toggleClass("show");
+        $('body').toggleClass("offcanvas-active");
+    });
+    // close button 
+    $(".btn-close").click(function(e){
+        $(".navbar-collapse").removeClass("show");
+        $("body").removeClass("offcanvas-active");
+       
+    }); 
+
+
+})
+</script>
+<link rel="stylesheet" href="./css/custom.css">
+</head>
+<body>
+
+
+
+<!-- ========================= SECTION CONTENT ========================= -->
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <button class="navbar-toggler" type="button" data-trigger="#main_nav">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand mt-0 mr-auto" href="#">Navbar</a>
+</nav>
+
+<div class="navbar-collapse d-xl-none d-lg-none" id="main_nav">
+  <div class="offcanvas-header mt-3">  
+    <button class="btn btn-outline-danger btn-close float-left"> &times</button>
+  </div>
+     <div class="my-5">
+       <img src="./img/beat miki.png" class="img-responsive mx-5" style="width: 50px; height:50px;" alt="">
+       <h5 class="mx-5 mt-5 text-white">
+         mekuanint abebe
+       </h5>
+       <div class="mx-5 my-5">
+        <a class="d-block m-2"  href="Index.html">Home</a>
+        <a class="d-block m-2"  href="about.html">About me</a><br>
+        <a class="d-block m-2"  href="selected.html">Selected Books</a><br>
+        <a class="d-block m-2"  href="curriculem vitae.html">Curriculem Vitae</a><br>
+       </div>
+     </div>
+  
+    </div> <!-- navbar-collapse.// -->
+
+   
+   
+<div class="container-fluid " id="blureme">
+    <div class="content d-none d-xl-block d-lg-block">
+        <div class="my-5">
+          <img src="./img/beat miki.png" class="img-responsive mx-5" style="width: 50px; height:50px;" alt="">
+          <h5 class="mx-5 mt-5 text-white">
+            mekuanint abebe
+          </h5>
+          <div class="mx-5 my-5">
+            <a class="d-block m-2" href="Index.html">Home</a>
+            <a class="d-block m-2"  href="about.html">About me</a><br>
+            <a class="d-block m-2"  href="selected.html">Selected Books</a><br>
+            <a class="d-block m-2"  href="curriculem vitae.html">Curriculem Vitae</a><br>
+          </div>
+        </div>
+      </div>
+ 
+<div class="row">
+    <div class="col-xl-3 col-sm-1 col-lg-3 col-md-1">
+    </div>
+    <div class="col-xl-9 col-sm-11 col-xs-11 col-md-11 col-lg-9 float-left">
+        <div class="container">
+            <div class="card">
+                <div class="card-body">
+                   <div class="ml-3"><div class="card-title p-3 display-4 text-center mt-5">About Me</div></div>
+                    <div class="card-text">
+                        <p>some facts about me:</p>
+                    <ol>
+                        <li>I grew up in Bahirdar, Ethipia.</li>
+                        <li>I am not married!</li>
+                        <li>I spoke Amharic and awugna growing up, am conversational in English.</li>
+                        <li>I love listning mezmur and I love also listning instrumental music.</li>
+                        <li>I enjoy playing football, but frankly I am not fan of any player and I 
+                            don't want to see any footbal match. Because I have no interest on it.</li>
+                        <li>I am flexible, depandable and engaged. But I have no self-estem at all. 
+                            This is my great weakness. I lost my self self-estem and self-confidence after I was ill
+                             in 2017 when I was in grade 11 in Tilili general preparatory and secondary higher school.  </li>
+                        <li>I have two brothers and three sisters and one nephew</li>
+                        <li>I am not good at History and Biology. But I am good at physics, mathematics
+                            and Social theology.
+                        </li>
+                    </ol>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>
+
+
+</div><!-- container //  -->
+
+</body>
+</html>

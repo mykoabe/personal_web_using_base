@@ -41,13 +41,14 @@
     bottom: 0;
     height: 100%;
     width: 25%;
+    max-width:90%; height: 100%; margin:0;
    
     /* transition: visibility .2s, transform .2s ease-in-out; */
   }
 .modal .modal-dialog-aside{
-	width: 350px;
+	width: 250px;
 	max-width:80%; height: 100%; margin:0;
-    transform: translate(0); transition: transform .2s;
+  transform: translate(0); transition: transform .2s;
 }
 .page-content {
     position: absolute;
@@ -59,14 +60,81 @@ main{
 }
 .exe{
   position: fixed;
+  bottom:0;
+  top:0;
+}
+.modal .modal-dialog-aside .modal-content{ 
+   height: inherit; 
+   border:0; border-radius: 0; 
+   background-color:black; 
+   color:white;}
+.modal .modal-dialog-aside .modal-content .modal-body{ 
+  overflow-y: auto }
+.modal.fixed-left .modal-dialog-aside{ 
+  margin-left:auto;  
+  transform: translateX(100%); }
+.modal.fixed-right .modal-dialog-aside{
+   margin-right:auto; 
+   transform: translateX(-100%); }
+
+.modal.show .modal-dialog-aside{ 
+  transform: translateX(0);  }
+
+  /* for the about part */
+
+body.offcanvas-active{
+	overflow:hidden;
+}
+.offcanvas-header{ display:none; }
+
+@media (max-width: 992px) {
+  .offcanvas-header{ display:block; }
+  .navbar-collapse {
+    position: fixed;
+    z-index: 1;
+    top:0; 
+    bottom: 0;
+    left:25%;
+    width: 35%;
+    margin-left :0;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    overflow-y: auto;
+    visibility: hidden;
+    background-color: black;
+    /* transition: visibility .2s ease-in-out, transform .2s ease-in-out; */
+  }
+  .navbar-collapse.show {
+    visibility: visible;
+    transform: translateX(-70%);
+  }
+}
+.content{
+  position: fixed;
+  z-index: 1;
+  top:0; 
+  bottom: 0;
+  left: 0;
+  width: 20%;
+  margin-left :0;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  overflow-y: auto;
+  background-color: black;
+}
+/* end there */
+.blurred {
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+  -webkit-filter: blur(10px);
+
+  filter: blur(10px);
+
+  -webkit-filter: url(#blur);
+
+  filter: url(#blur);
+
+
 }
 
-
-
-.modal .modal-dialog-aside .modal-content{  height: inherit; border:0; border-radius: 0; background-color:black; color:white;}
-.modal .modal-dialog-aside .modal-content .modal-body{ overflow-y: auto }
-.modal.fixed-left .modal-dialog-aside{ margin-left:auto;  transform: translateX(100%); }
-.modal.fixed-right .modal-dialog-aside{ margin-right:auto; transform: translateX(-100%); }
-
-.modal.show .modal-dialog-aside{ transform: translateX(0);  }
 
