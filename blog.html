@@ -1,0 +1,217 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="keywords" content="htmlcss bootstrap menu, navbar, mega menu examples" />
+<meta name="description" content="Bootstrap navbar examples for any type of project, Bootstrap 4" />  
+<link rel="icon" href="./assets/img/android-icon-72x72.png">
+<title>Mekuanint Abebe</title>
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+$(function () {
+	  'use strict'
+
+	$("[data-trigger]").on("click", function(){
+        var trigger_id =  $(this).attr('data-trigger');
+        $(trigger_id).toggleClass("show");
+        $('body').toggleClass("offcanvas-active");
+    });
+    // close button 
+    $(".btn-close").click(function(e){
+        $(".navbar-collapse").removeClass("show");
+        $("body").removeClass("offcanvas-active");
+    }); 
+
+
+})
+</script>
+<link rel="stylesheet" href="./assets/css/custom.css">
+</head>
+<body>
+
+
+
+<!-- ========================= SECTION CONTENT ========================= -->
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <button class="navbar-toggler" type="button" data-trigger="#main_nav">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand mt-0 mr-auto" href="#">Navbar</a>
+</nav>
+
+<div class="navbar-collapse d-xl-none d-lg-none" id="main_nav">
+  <div class="offcanvas-header mt-3">  
+    <button class="btn btn-outline-danger btn-close float-left"> &times</button>
+  </div>
+  <div class="my-5">
+    <a class="d-block m-3 all "  href="Index.html">Home</a>
+    <a class="d-block m-3 all"  href="about.html">About me</a>
+    <a class="d-block m-3 all"  href="selected.html">Selected Books</a>
+    <a class="d-block m-3 all"  href="curriculem vitae.html">Curriculem Vitae</a>
+    <a class="d-block m-3 all"  href="contacts.html">contacts</a>
+    <a class="d-block m-3 all"  href="blog.html">Blog</a>
+ </div>
+  
+    </div> <!-- navbar-collapse.// -->
+
+   
+   
+    <div class="container-fluid d ">
+      <div class="content d-none d-xl-block d-lg-block">
+          <div class="my-3 mx-3">
+            <img src="./assets/img/beat miki.png" class="img-responsive mx-3" style="width: 50px; height:50px;" alt="">
+            <h5 class="mt-3 mx-2 text-white">
+              mekuanint ab
+            </h5>
+            <div class="mt-5">
+            <a class="d-block m-3 all "  href="Index.html">Home</a>
+            <a class="d-block m-3 all"  href="about.html">About me</a>
+            <a class="d-block m-3 all"  href="selected.html">Selected Books</a>
+            <a class="d-block m-3 all"  href="curriculem vitae.html">Curriculem Vitae</a>
+            <a class="d-block m-3 all"  href="contacts.html">contacts</a>
+            <a class="d-block m-3 all"  href="blog.html">Blog</a>
+            </div>
+            </div>
+          </div>
+        </div>
+
+<div class="row">
+    <div class="col-xl-3 col-sm-1 col-lg-3 col-md-1">
+    </div>
+    <div class="col-xl-9 col-sm-11 col-xs-11 col-md-11 col-lg-9 float-left">
+      <h2 class="text-center display-4 m-5" >News Updated</h2>
+         <div class="card">
+           <div class="card-body">
+             <div class="card-title">
+              <h2 class="mb-5">Does it matter using relative size(%,em,rem) on styling the size of an
+                element so that the element is responsive?</h2>
+             </div>
+             <div class="card-text" style="width: 90%;">
+              <p>
+                Yes it matters. we must choose the right relative units(%, em , rem) to create flexible and robust 
+                designs in a straightforward manner.for example if we consider the browser zooming. When the user
+                 zooms the page in a modern browser, everything scales up or down proportionally, depending 
+                 on the user’s preference. That means our users/end users need to be able to zoom the viewport without 
+                 loss of content or functionality, or restrictions imposed by CSS values or viewport scaling settings.
+                 The page may zoom, however the fonts will not scale up relatively to the browser default font size setting. 
+                 Therefore, the end user experience is being impacted by the developer’s choice to use pixels or relative units for fonts.
+                 we can use <a href="http://www.standardista.com/px-to-rem-conversion-if-root-font-size-is-16px/">
+                    great px to rem conversion reference table</a> here or If we want an online calculator use this 
+                    <a href="http://pxtoem.com/">Pxtoem</a> to change all conversion . 
+                lets see one by one this the relative units and the pixels when we use and don't use.
+                 sometimes the web developer may come into a problem with
+                  images, for example icons, but it can be whatever image. he want to set width using `em`s as well to 
+                  scale up with `font-size` of a link which the icon belongs to, but it (the browser) renders blurry sometimes 
+                  because it computes to a value like 12.15245px. So we are forced to set it in pixel value so it is 
+                  not blurred but then it would not scale up when font-size through browser setting is increased/decreased
+            </p>
+            <p>
+              According to the <a href="http://www.w3.org/TR/2013/CR-css3-values-20130730/#font-relative-lengths">W3C spec</a> 
+              the definition for one rem unit is equal to the computed value of font-size on the root element. When 
+              specified on the font-size property of the root element, the rem units refer to the property’s initial value.
+              This means that 1rem equals the font size of the html element (which for most browsers has a default value of 16px).
+              The main problem with em units is that they are relative to the font size of their own element. 
+              As such they can cascade and cause unexpected results. Let’s consider the following example, where we 
+              want lists to have a font size of 12px, in the case where the root font size is the default 16px: 
+              Especially, if we're designing for multiple resolutions with responsive design. Think of generally 
+              smaller or larger font sizes on mobile phones. It takes time to recalculate every pixel value to the new base font size. 
+              This is where relative font sizes become useful. With %,em/rem sizing, we can change just the base font size for 
+              <a href=""></a> specific viewport to decrease or increase all font sizes, 
+              while keeping proportions between the different styles.   This leads to problems, because it might become complex to know the 
+              inherited font size from within the CSS. Here it comes to rem. The cool thing about this 
+              CSS3 unit is, that it always uses the root (e.g. html) font size as the base size instead of 
+              the inherited one. Therefore it is always calculable. There for using the relative size matters 
+              the browser zooming.
+          </p>
+          <button class="btn btn-outline-primary float-right mr-5 pr-5" type="button">Read more</button>
+          <p class="ml-5 time">March 16 2020</p>
+             </div>
+           </div>
+         </div>
+         <!-- end -->
+         <div class="card">
+          <div class="card-body">
+            <div class="card-title">
+            <h2>We said 16px is default browser font size so what does it mean when we say
+                200px ? How does the browser interprets that?</h2>
+            </div>
+            <div class="card-text" style="width: 90%;">
+              <p> The browser has the default font size of 16px means all the contents inside the html page have the font 
+                size of 16px or 1rem. but it doesn't include the header groups from h1 to h6. Generally according
+                to <a href="https://developer.mozilla.org/en/docs/Web/CSS/font-size">font-size - CSS: Cascading Style Sheets | MDN</a>
+                If we haven't set font size anywhere on the page, then it would be the browser default, 
+                which is probably 16px. So by default 1rem = 16px. If we were to go and set a font-size 
+                of 200px on the browser text, the value or the text becomes about 12.5 times of that of the
+                default browser font size which is 16px or 1rem.
+                </p>
+                <p>But if we give the body about 16px or 1em, and we were to go and set a font-size 
+                    of 200px on the browser text the value will gove its value relativly the body of the 
+                    web page. </p>
+                    <button class="btn btn-outline-primary float-right mr-5 pr-5" type="button">Read more</button>
+                    <p class="ml-5 time">March 16 2020</p>     
+            </div>
+
+          </div>
+        </div>
+        <!-- end -->
+        <div class="card">
+          <div class="card-body">
+            <div class="card-title">
+              <h2>The major Changes of CSS3</h2>
+            </div>
+            <div class="card-text" style="width: 90%;">
+              <p>
+                The first change which is introduced in CSS3 is the opacity property which allows us to specify the opacity of an element
+                and any of its child elements.The value is a number between 0.0 and 1.0 (so a value of 0.5
+                is 50% opacity and 0.15 is 15% opacity).The CSS3 rgba property allows us to specify a color,
+                like we use for the RGB value, but adds a fourth value to indicate opacity. This value is
+                known as an alpha value. The rgba value will only affect the element on which it is applied
+                (not child elements).But some browsers will not recognize RGBA colors,so we must offer a fallback so that they
+                display a solid color. If there are two rules that apply to the same element, the latter of the two
+                will take priority. To create the fallback, we can specify a color as a hex code, color name or
+                RGB value, followed by the rule that specifies an RGBA value. If the browser understands RGBA colors it will use that rule. If it
+                doesn't, it will use the RGB value. At the time of writing, the opacity and RGBA properties are only supported by the most
+                recent browsers.
+            </p>
+            <p>
+              Another change which CSS3 introduces is an entirely new and intuitive way to specify colors using 
+              hue, saturation, and lightness values. HUE is expressed as an angle (between 0 and 360 degrees).
+              saturation is expressed as a percentage. lightness is expressed as a percentage with 0% being white, 50% being normal,
+              and 100% being black.Lightness is the amount of white (lightness) or black (darkness) in a color. Lightness
+              is represented as a percentage.0% lightness is black, 100% lightness is white, and 50% lightness is normal. Lightness
+              is sometimes referred to as luminosity. Saturation is the amount of gray in a color. Saturation is
+              represented as a percentage.100% is full saturation and 0% is a shade of gray.
+              Hue is the colloquial idea of color. In HSL colors, hue is often represented as a color circle
+              where the angle represents the color, although it may also be shown as a slider with values from 0 to 360.
+          </p>
+          <p>CSS3 has also introduced the ability to create image borders and rounded borders. and also we can create
+              any rounded border box using the property border-radius. the value indicates the size of the border-radius
+              in pixels. we can specify the individual values using border-top-right-radius,border-bottom-right-radius
+              border-bottom-left-radius, border-top-left-radius.We can also use a shorthand of these four properties (in
+              clockwise order: top, right,bottom, left). For example: border-radius: 10px, 5px,6px, 45px; there for
+              using this property we can draw the eliptical shapes and rounded corners. For additional clarifications
+              see <a href="https://www.academia.edu/31552563/Jon_Duckett_HTML_and_CSS_Design_and_Build_Websites.pdf">html and css design and build websites Jon Duckett</a>.
+          </p>
+              <button class="btn btn-outline-primary float-right mr-5 pr-5" type="button">Read more</button>
+              <p class="ml-5 time">March 16 2020</p>     
+            </div>
+          </div>
+        </div>
+         <!-- end -->
+       </div>
+    </div>
+</div>
+
+
+</div><!-- container //  -->
+<!-- Bootstrap files (jQuery first, then Popper.js, then Bootstrap JS) -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js" type="text/javascript"></script>
+</body>
+</html>
