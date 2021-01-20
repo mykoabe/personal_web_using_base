@@ -19,6 +19,11 @@
     width: 1em;
     float: right;
   } */
+*{
+  font-family: 'Coda Caption', sans-serif;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'PT Serif', serif;
+}
 a.all{
   color: white
 }

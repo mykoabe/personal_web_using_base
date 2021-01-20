@@ -13,90 +13,48 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
 <!-- Material Design Bootstrap -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
-<style type="text/css">
-body {
-    font-family: "Lato", sans-serif;
-}
-
-.sidenav {
-    height: 100%;
-    width: 10px;
-    position: fixed;
-    z-index: 1;
-    top: 60px;
-    right: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-}
-
-.sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s
-}
-
-.sidenav a:hover, .offcanvas a:focus{
-    color: #f1f1f1;
-}
-
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-#icons{
-  float: right;
-}
-.embed-responsive-1by1{
-  float: left;
-}
-.no{
-  float: right;
-}
-
-</style>
+<link rel="icon" type="image/png" href="./assets/img/android-icon-72x72.png">
 </head>
 <body>
-<div class="row">
-  <div class="col-9">
-    <div class="embed-responsive embed-responsive-1by1">
-      <object class="embed-responsive-item" data="./assets/files/Mekuanint Abebe.pdf"
-         type="application/pdf" internalinstanceid="9" title="">
-         <p>
-            Your browser isn't supporting embedded pdf files. You can download the file
-            <a href="./files/Adugnaw_abebe_cv.pdf">here</a>.
-         </p>
-      </object>
-    </div>
+<div class="container">
+    <div class="row">
+    <div class="col-9">
+    <h3 class="text-center mt-5">Mekuanint abebe.pdf</h3>
+     <div class="firstOne float-center" style="width: 80%;">
+    <object class="mt-5" data="./assets/files/mekuanint Abebe.pdf" type="application/pdf" width="100%" height="800px"> 
+      <p>It appears you don't have a PDF plugin for this browser.
+       No biggie... you can <a href="./assets/files/mekuanint Abebe.pdf">click here to
+      download the PDF file.</a></p>  
+    </object>
   </div>
- 
-<div class="col-3">
-  <span class="d-block" id="icons" style="font-size:30px;cursor:pointer" onclick="openNav()"><i class="fas fa-arrows-alt-h"></i></span>
-  <div id="mySidenav" class="sidenav">
-  <a href="#">About</a>
-  <a href="#">Services</a>
-  <a href="#">Clients</a>
-  <a href="#">Contact</a>
 </div>
-</div> 
-</div> 
-<script>
-function openNav() {
-    var e = document.getElementById("mySidenav");
-    if (e.style.width == '250px')
-    {
-        e.style.width = '0px';
-    }
-    else 
-    {
-        e.style.width = '250px';
-    }
-}
-</script>
+    <div class="col-3">
+        <div class="secondOne float-right">
+            <div id="mySidenav" class="sidenav float-right">
+              <div class="row">
+                  <div class="col-4">
+                    <div class="sign-up-btn m-5 p-0" style="width: 30px; height: 30px;">
+                        <input class="btn-primary" type="button" value="Sign in">
+                     </div>
+                  </div>
+                  <div class="col-4">
+                     <div class="sign-in-btn m-5">
+                         <input type="button" value="Sign up">
+                     </div>
+                  </div>
+              </div>
+              <p>Mekuanint Abebe cv pdf file</p>
+              <p class="d-block">
+                  <a href="">Details</a>
+              </p>
+              <p>size = 544kb</p>
+          </div>
+          </div>
+    </div>
+</div>
+
+   
+</div>
   
 <!-- JQuery -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
