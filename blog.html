@@ -7,7 +7,7 @@
 <meta name="description" content="Bootstrap navbar examples for any type of project, Bootstrap 4" />  
 <link rel="icon" href="./assets/img/android-icon-72x72.png">
 <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Coda+Caption:wght@800&family=Open+Sans+Condensed:ital,wght@0,300;1,300&family=PT+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Texturina:ital,wght@0,100;0,200;1,100;1,200;1,300&display=swap" rel="stylesheet">
 <title>Mekuanint Abebe</title>
 
 <!-- jQuery -->
@@ -18,7 +18,6 @@ crossorigin="anonymous"></script>
 <script type="text/javascript">
 $(function () {
 	  'use strict'
-
 	$("[data-trigger]").on("click", function(){
         var trigger_id =  $(this).attr('data-trigger');
         $(trigger_id).toggleClass("show");
@@ -29,13 +28,10 @@ $(function () {
         $(".navbar-collapse").removeClass("show");
         $("body").removeClass("offcanvas-active");
     }); 
-
-
 })
 </script>
-
 </head>
-<body>
+<body class="blog">
 
 
 
@@ -90,10 +86,13 @@ $(function () {
     <div class="col-xl-9 col-sm-11 col-xs-11 col-md-11 col-lg-9 float-left">
       <h2 class="text-center display-4 m-5" >News Updated</h2>
          <div class="card">
+           <img src="./assets/img/download (1).jpeg" alt="">
            <div class="card-body">
              <div class="card-title">
-              <h2 class="mb-5">Does it matter using relative size(%,em,rem) on styling the size of an
-                element so that the element is responsive?</h2>
+               <div class="card-img-overlay" >
+                <h2 class="mb-5 header_for">Does it matter using relative size(%,em,rem) on styling the size of an
+                  element so that the element is responsive?</h2>
+               </div>
              </div>
              <div class="card-text" style="width: 90%;">
               <p>
